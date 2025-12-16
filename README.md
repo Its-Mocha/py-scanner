@@ -19,12 +19,16 @@ Built and tested on **Red Hat Enterprise Linux 9**, this tool leverages Python's
 ### Option 1: Run via Docker (Recommended)
 You can run this tool instantly without installing Python, thanks to the Docker image.
 
+
+
 ```bash
 # Build the image
 docker build -t my-scanner .
 
 # Scan a target (Replace IP with your target)
-docker run --rm my-scanner 192.168.0.1
+docker run --rm my-scanner 192.168.0.1 
+
+```
 
 ## 📸 Screenshot
 <img width="1076" height="867" alt="remote-viewer_GmkrppGeSa" src="https://github.com/user-attachments/assets/aa3767ad-60f4-4d22-8da2-51c52ed1732b" />
