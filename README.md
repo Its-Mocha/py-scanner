@@ -25,3 +25,6 @@ docker build -t my-scanner .
 
 # Scan a target (Replace IP with your target)
 docker run --rm my-scanner 192.168.0.1
+
+## 📸 Screenshot
+<img width="1076" height="867" alt="remote-viewer_GmkrppGeSa" src="https://github.com/user-attachments/assets/aa3767ad-60f4-4d22-8da2-51c52ed1732b" />
