@@ -1,0 +1,24 @@
+name: CI Build Test
+
+# Trigger: Run this every time we push code to the 'main' branch
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    # Use a standard Ubuntu server hosted by GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Download our code from the repo
+    - uses: actions/checkout@v3
+
+    # Step 2: Build the Docker image (just like you did locally)
+    - name: Build Docker Image
+      run: docker build -t my-scanner .
+
+    # Step 3: Test Run (Sanity Check)
+    # We scan Google's DNS (8.8.8.8) just to prove the container runs without crashing
+    - name: Test Run against Google DNS
+      run: docker run --rm my-scanner 8.8.8.8
